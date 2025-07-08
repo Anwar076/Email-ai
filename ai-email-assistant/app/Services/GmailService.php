@@ -164,7 +164,6 @@ class GmailService
     public function sendReply($messageId, $replyContent, $originalEmail)
     {
         try {
-            // Create the reply message
             $replySubject = 'Re: ' . preg_replace('/^Re: /', '', $originalEmail['subject']);
             
             $message = new \Google\Service\Gmail\Message();
